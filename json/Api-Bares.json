@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "822a9425-520a-4042-82bd-c49eba62a27e",
+		"name": "Api-Bares",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38617627"
+	},
+	"item": [
+		{
+			"name": "Buscar todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/place/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La Estrellita\",\r\n    \"direccion\": \"C. San Jacinto, 41010 Sevilla\",\r\n    \"latitud\": 37.38134752633658, \r\n    \"longitud\": -6.008991465058743,\r\n    \"descripcion\": \"En mi opinión, la estrellita es el bar donde ponen los desayunos más ricos de toda triana, buen ambiente y además de agradables, profesionales....a por 30 años más\",\r\n    \"photoUrl\": \"https://lh3.googleusercontent.com/p/AF1QipPwcdNX-cqOXL7_m2hs3Q39mRX-fEAs5sGuVqil=s680-w680-h510\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La Estrellota\",\r\n    \"direccion\": \"C. San Lorenzo, 41010 Sevilla\",\r\n    \"latitud\": 37.38134752633656, \r\n    \"longitud\": -6.008991465058743,\r\n    \"descripcion\": \"En mi opinión, la estrellota es el bar donde ponen los desayunos más ricos de toda triana, buen ambiente y además de agradables, profesionales....a por 30 años más\",\r\n    \"photoUrl\": \"https://lh3.googleusercontent.com/p/AF1QipPwcdNX-cqOXL7_m2hs3Q39mRX-fEAs5sGuVqil=s680-w680-h510\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/place/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar tag",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Restaurante\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/place/2/tag/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place",
+						"2",
+						"tag",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tag",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/place/1/tag/del/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place",
+						"1",
+						"tag",
+						"del",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar bar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/place/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

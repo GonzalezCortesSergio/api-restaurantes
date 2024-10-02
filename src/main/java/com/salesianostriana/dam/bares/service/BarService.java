@@ -48,6 +48,8 @@ public class BarService extends BaseServiceImpl<Bar, Long, BarRepository> {
 
         bar.addTag(tag);
 
+        tagService.save(tag);
+
         return repository.save(bar);
     }
 
