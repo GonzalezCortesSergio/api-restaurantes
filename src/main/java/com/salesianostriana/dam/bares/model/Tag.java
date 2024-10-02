@@ -24,7 +24,7 @@ public class Tag {
     fetch = FetchType.EAGER)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @Builder.Default
     @JsonIgnoreProperties("tags")
+    @Builder.Default
     private List<Bar> bares = new ArrayList<>();
 }

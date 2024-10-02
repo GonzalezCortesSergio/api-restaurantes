@@ -33,9 +33,9 @@ public class Bar {
     joinColumns = @JoinColumn(name = "bar_id"),
     inverseJoinColumns = @JoinColumn(name = "tag_id"))
     @ToString.Exclude
-    @Builder.Default
     @EqualsAndHashCode.Exclude
     @JsonIgnoreProperties("bares")
+    @Builder.Default
     private List<Tag> tags = new ArrayList<>();
 
     @Column(columnDefinition = "TEXT")
